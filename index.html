@@ -14,73 +14,495 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );      
+//    window.addEventListener('DOMContentLoaded', function() {});
+      		
 		</script>
+		<style TYPE="text/css">
+      section  {
+        -webkit-transform: rotateZ(0deg); /* Safari and Chrome */
+      }
+      
+      .icons a  {
+        position: relative;
+        font: 8px arial;
+        font-weight: bold;
+        text-decoration: none;
+        -webkit-filter: grayscale(1);
+      }
+      
+      .icons a div {
+        position: absolute;
+        top: -80px;
+        left: 0px;
+        width: 80px;
+        text-align: center;
+      }
+      
+      .icons a:hover {
+        -webkit-filter: grayscale(0);
+      }
+      
+      .icons a img {
+         border: 1px solid gray;
+         margin: 20px 20px 10px 10px;
+      }
+      
+      #icons {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 80px;
+        overflow: hidden;
+        background: url('img/bar.gif');
+        border-bottom: 1px solid black;
+        z-index: 20;
+        zoom: 1;
+      }
+      
+      .icon {
+        display: block;
+        width: 100px;
+        position: relative;
+        float: left;
+      }
+      
+      .subpages {
+        width: 10px;
+        position: absolute;
+        top: 10px;
+        left: 80px;
+      }
+    
+ #publications {
+	width:460px;
+	border:1px solid gray;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	margin-top:40px;
+	background:#fff;
+	padding:20px;
+	text-align: left;
+	font: 12px arial;
+	position: relative;
+}
 
+#publications a {
+  font-size: 12px;
+}
+#publications p {
+	clear:both;
+}
+#publications a img {
+	width:50px;
+	float:left;
+	margin: 0px;
+	margin-right:10px;
+	margin-bottom:10px;
+		margin-bottom: 20px;
+
+	border:1px solid gray;
+	clear: both;
+}
+
+#publications a:hover img {
+	border:1px solid black;
+}
+
+section .prose {
+  font-size: 16px;
+  text-align: left;
+  padding: 20px;
+  background: #EEEEFF;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  margin-left: -350px;
+  box-shadow: 0px 0px 5px #EEEEFF;
+  background: none;
+  box-shadow: none;
+}
+
+.prose b {
+  background: #CCCCCC;
+  color: black;
+  border-radius: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-weight: normal;
+  margin: 2px;
+}
+
+
+
+    
+    </style>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
-	<body>
+<body>
+        
+    <div class="reveal" style="z-index: 1">
 
-		<div class="reveal">
+		  <!-- Any section element inside of this container is displayed as a slide -->
+		  <div class="slides" id="mySlides">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+      <section id="home">
+			 <h2>Portfolio</h2>
+			 <small>Site based on <a target="_new" href="http://lab.hakim.se/reveal-js/">Reveal.js</a></small>
+		  </section>
+		
+		  <section id=" ">
+        <section>
+					<p>Cryptagram</p>
+					
+          <img src="img/cryptagram_1.jpg">
+          <p class=prose>
+          <a href="http://cryptagr.am">Cryptagram</a> enhances online photo privacy by adding password protection to JPEG images.
+        
+          <br>I developed the encoding protocol and wrote the <b>Chrome Extension</b>, making extensive use of object-oriented <b>Javascript</b> through the <b>Closure</b> framework.</p>
 
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+		    </section>  
+      </section>
+		
+		  <section id="motionchain">
+        <section>
+					<p>Motion Chain</p>
+          <img src="img/motionchain_1.jpg" class="box">
+		    </section>
+		    
+		    <section>
+					<p>Motion Chain</p>
+          
+          
+<!--           <iframe id="player" width="640" height="360" src="https://www.youtube.com/embed/06T6FNO2HA8?feature=player_embedded&enablejsapi=1" frameborder="0" allowfullscreen></iframe>         -->
+  
+  
+        </section>	    
+      </section>
+		
+		  <section id="dotshow">
+        <section>
+					<p>Dot Show</p>
+          <img src="img/dotshow_1.jpg">
+		    </section>
+      </section>
 
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+		  <section id="markerless">
+        <section>
+					<p>Markerless Motion Capture</p>
+          <img src="img/markerless_1.jpg" class="box">
+		    </section>		    
+        <section>
+					<p>Markerless Motion Capture</p>
+          <img src="img/markerless_2.jpg" class="box">
+		    </section>		    
+      </section>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+		  <section id="academic">
+        <section>
+					<p>Academic Research</p>
+          <div id="publications">
+            <p><a href="chi2012.pdf"><img src="img/mc.jpg">Motion Chain</a><br>
+            <i>A Webcam Game for Crowdsourcing Gesture Collection</i><br>
+            <span class="smaller">Extended Abstracts of ACM SIGCHI, 2012</span></p>
+    
+            <p><a href="ci2012.pdf"><img src="img/markerless.jpg">Markerless Motion Capture in the Crowd</a><br>
+            Ian Spiro, Thomas Houston, Christoph Bregler (2012)<br>
+            <span class="smaller">Collective Intelligence, 2012</span></p>
+    
+            <p><a href="cvpr2012.pdf"><img src="img/cvpr.jpg">3D Skeletal Reconstruction from Low-resolution Multi-view Images</a><br>
+            Mayank Rana, Graham Taylor, Ian Spiro, and Christoph Bregler (2012)<br>
+            <span class="smaller">IEEE CVPR Workshop on Human Activity Understanding from 3D Data (HAU3D)</span></p>
+    
+            <p><a href="cvpr2011.pdf"><img src="img/invariance.jpg">Learning Invariance through Imitation</a><br>
+            Graham Taylor, Ian Spiro, Christoph Bregler, and Rob Fergus (2011)<br>
+            <span class="smaller">Proceedings of the 24th IEEE Computer Society Conference on Computer Vision and Pattern Recognition</span></p>
+    
+            <p><a href="nips2010.pdf"><img src="img/pose.jpg">Pose-Sensitive Embedding by Nonlinear NCA Regression</a><br>
+            Graham W. Taylor, Rob Fergus, George Williams, Ian Spiro and Christoph Bregler (2010)<br>
+            <span class="smaller">Proceedings of Advances in Neural Information Processing Systems 23</span></p>
+    
+            <p><a href="acvhl2010.pdf"><img src="img/hands.jpg">Hands by Hand: Crowd-sourced Motion Tracking for Gesture Annotation</a><br>
+            Ian Spiro, Graham Taylor, George Williams and Chris Bregler (2010)<br>
+            <span class="smaller">IEEE CVPR Workshop on Advancing Computer Vision with Humans in the Loop</span></p>
+    
+            <p><a href="chi2008.pdf"><img src="img/eye.jpg">Eye-Mouse Coordination Patterns on Web Search Results Pages</a><br>
+            Kerry Rodden, Xin Fu, Anne Aula, and Ian Spiro (2008)<br>
+            <span class="smaller">Extended Abstracts of ACM SIGCHI, 2012</span></p>
+          </div>
+		    </section>		    
+      </section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
+		  <section id="squidball">
+        <section>
+					<p>Squidball at Ars Electronica</p>
+          <img src="img/squidball_1.jpg" class="box">
+		    </section>		    
+      </section>
+      
+      <section id="mocap">
+        <section>
+					<p>Motion Capture</p>
+          <img src="img/mocap_1.jpg" class="box">
+		    </section>
+      </section>
+      
+		  <section id="party">
+        <section>
+					<p>Party Visualizations</p>
+          <img src="img/party_1.jpg">
+		    </section> 
+	      <section>
+					<p>T-Scope</p>
+		     <!--  <iframe id="player2" width="640" height="360" src="https://www.youtube.com/embed/HZfxuXG1giQ?feature=player_embedded&enablejsapi=1" frameborder="0" allowfullscreen></iframe>  -->
+		    </section> 	      
+		    <section>
+					<p>Hottest or Not</p>
+          <img src="img/party_3.jpg">
+		    </section>
+      </section>
+
+		  <section id="xcam">
+        <section>
+					<p>Xcam</p>
+          <img src="img/xcam_1.jpg">
+		    </section>
+      </section>   
+
+		  <section id="bunny">
+        <section>
+					<p>Bunny Cam</p>
+          <img src="img/bunny_1.jpg">
+		    </section>
+      </section>   
+
+		  <section id="wlog">
+        <section>
+					<p>Wlog</p>
+          <img src="img/wlog_1.jpg">
+		    </section>
+      </section>
+
+      <section id="plenovision">
+        <section>
+					<p>Plenovision</p>
+          <img src="img/plenovision_1.jpg">
+		    </section>
+      </section>   
+
+		  <section id="gmail">
+        <section>
+					<p>Gmail Paper</p>
+          <img src="img/gmail_1.jpg">
+		    </section>
+        <section>
+					<p>Gmail Paper</p>
+          <img src="img/gmail_2.jpg">
+		    </section>
+      </section>
+
+		  <section id="dlog">
+        <section>
+					<p>Dlog</p>
+          <img src="img/dlog_1.jpg">
+		    </section>
+        <section>
+					<p>Dlog</p>
+          <img src="img/dlog_2.jpg">
+		    </section>
+      </section>
+
+		  <section id="fastfood">
+        <section>
+					<p>Fast Food Maps</p>
+          <img src="img/fastfood_1.jpg" class="box">
+		    </section>
+        <section>
+					<p>Fast Food Maps</p>
+          <img src="img/fastfood_2.jpg" class="box">
+		    </section>
+        <section>
+					<p>Fast Food Maps</p>
+          <img src="img/fastfood_3.jpg">
+		    </section>
+      </section>
+
+		  <section id="trainovision">
+        <section>
+					<p>Trainovision</p>
+          <img src="img/trainovision_1.jpg" class="box">
+		    </section>
+        <section>
+					<p>Trainovision</p>
+          <img src="img/trainovision_2.jpg" class="box">
+		    </section>
+        <section>
+					<p>Trainovision</p>
+          <img src="img/trainovision_3.jpg" class="box">
+		    </section>
+      </section>
+
+		  <section id="lifegraph">
+        <section>
+					<p>Life Graph</p>
+          <img src="img/lifegraph_1.jpg">
+		    </section>
+        <section>
+					<p>Life Graph</p>
+          <img src="img/lifegraph_2.jpg">
+		    </section>
+      </section>
+
+		  <section id="weddingtowne">
+        <section>
+					<p>Weddingtowne</p>
+          <img src="img/weddingtowne_1.jpg">
+		    </section>
+        <section>
+					<p>Weddingtowne</p>
+          <img src="img/weddingtowne_2.jpg">
+		    </section>
+        <section>
+					<p>Weddingtowne</p>
+          <img src="img/weddingtowne_3.jpg">
+		    </section>
+      </section>
+
+		  <section id="pile">
+        <section>
+					<p>Pile of Papers</p>
+          <img src="img/pile_1.jpg">
+		    </section>
+        <section>
+					<p>Pile of Papers</p>
+          <img src="img/pile_2.jpg">
+		    </section>
+      </section>
+
+		  <section id="twr">
+        <section>
+					<p>The Wooden Robot</p>
+          <img src="img/twr_1.jpg" class="box">
+		    </section>
+        <section>
+					<p>The Wooden Robot</p>
+          <img src="img/twr_2.jpg">
+		    </section>
+        <section>
+					<p>The Wooden Robot</p>
+          <img src="img/twr_3.jpg">
+		    </section>
+        <section>
+					<p>The Wooden Robot</p>
+          <img src="img/twr_4.jpg">
+		    </section>
+      </section>
+
+		  <section id="houndbite">
+        <section>
+					<p>Hound Bite</p>
+          <img src="img/houndbite_1.jpg">
+		    </section>
+      </section>
+
+		  <section id="wefeelfine">
+        <section>
+					<p>We Feel Fine</p>
+          <img src="img/wefeelfine_1.jpg" class="box">
+		    </section>
+        <section>
+					<p>We Feel Fine</p>
+          <img src="img/wefeelfine_2.jpg" class="box">
+		    </section>
+      </section>
+
+		  <section id="urbaniacs">
+        <section>
+					<p>Urbaniacs</p>
+          <img src="img/urbaniacs_1.jpg" class="box">
+		    </section>
+        <section>
+					<p>Urbaniacs</p>
+          <img src="img/urbaniacs_2.jpg" class="box">
+		    </section>
+        <section>
+					<p>Urbaniacs</p>
+          <img src="img/urbaniacs_3.jpg" class="box">
+		    </section>
+      </section>
+
+		  <section id="distilled">
+        <section>
+					<p>Distilled</p>
+          <img src="img/distilled_1.jpg">
+		    </section>
+        <section>
+					<p>Distilled</p>
+          <img src="img/distilled_2.jpg">
+		    </section>
+        <section>
+					<p>Distilled</p>
+          <img src="img/distilled_3.jpg">
+		    </section>
+      </section>
+
+		  <section id="web">
+        <section>
+					<p>Web Design</p>
+          <img src="img/web_1.jpg">
+		    </section>		    
+        <section>
+					<p>Web Design</p>
+          <img src="img/web_2.jpg">
+		    </section>
+		    <section>
+					<p>Web Design</p>
+          <img src="img/web_3.jpg">
+		    </section>
+      </section>
+      
+      <section id="prowler">
+        <section>
+					<p>College Prowler</p>
+          <img src="img/prowler_1.jpg">
+		    </section>
+      </section>
+
+		  <section id="chaparral">
+        <section>
+					<p>Stanford Chaparral</p>
+          <img src="img/chaparral_1.jpg">
+		    </section>
+		    <section>
+					<p>Stanford Chaparral</p>
+          <img src="img/chaparral_2.jpg">
+		    </section>
+		    <section>
+					<p>Stanford Chaparral</p>
+          <img src="img/chaparral_3.jpg">
+		    </section>
+		    <section>
+					<p>Stanford Chaparral</p>
+          <img src="img/chaparral_4.jpg">
+		    </section>
+      </section>
+            
+      <section id="demo">
+        <section>
 						<h2>Basement Level 3</h2>
 						<p>That's it, time to go back up.</p>
 						<a href="#/2" class="image">
@@ -89,262 +511,55 @@
 					</section>
 				</section>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
 
-				<section>
-					<h2>rvl.io</h2>
-					<p>
-						If you don't like writing slides in HTML you can use the online editor <a href="http://www.rvl.io" target="_blank">rvl.io</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-							<section data-markdown>
-							  ## Markdown support
-
-							  For those of you who like that sort of thing.
-							  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-							</section>
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> -
-						<a href="?#/themes">Default</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
-						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This lets you
-							apply broader style changes, like switching the background.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#" class="image navigate-next">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(-90deg);">
-						</a>
-					</section>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
-
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Leave feedback on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>It's free</h2>
-					<p>
-						reveal.js and <a href="http://www.rvl.io">rvl.io</a> are entirely free but if you'd like to support the projects you can donate below.
-						Donations will go towards hosting and domain costs.
-					</p>
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<input type="hidden" name="cmd" value="_donations">
-						<input type="hidden" name="business" value="hakim.elhattab@gmail.com">
-						<input type="hidden" name="lc" value="US">
-						<input type="hidden" name="item_name" value="reveal.js / rvl.io">
-						<input type="hidden" name="no_note" value="0">
-						<input type="hidden" name="currency_code" value="USD">
-						<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-					</form>
-				</section>
-
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
 
 			</div>
+			
+			  <div id="icons"></div>
 
+			
 		</div>
+		
+		
+
+      
+     <!--
+ <div class="icon">
+        <a href="#"><div class="title">Fast Food</div><img src="img/fastfood-icon.jpg"></a>
+        <div class="subpages">
+          <a href=#>1</a>
+          <a href=#>2</a>
+          <a href=#>3</a>
+        </div>
+      </div>
+      
+       <div class="icon">
+        <a href="#"><div class="title">Trainovision</div><img src="img/train-icon.jpg"></a>
+        <div class="subpages">
+          <a href=#>1</a>
+          <a href=#>2</a>
+          <a href=#>3</a>
+        </div>
+      </div>
+      
+      <a href="#"><div class="title">Weddingtowne</div><img src="img/weddingtowne-icon.jpg"></a>
+      <a href="#"><div class="title">Fastfood</div><img src="img/lifegraph-icon.jpg"></a>
+      <a href="#"><div class="title">Fastfood</div><img src="img/dlog-icon.gif"></a>
+      <a href="#"><div class="title">Fastfood</div><img src="img/pile-icon.jpg"></a>
+      <a href="#"><div class="title">Fastfood</div><img src="img/houndbite-icon.gif"></a>
+      <a href="#"><div class="title">Fastfood</div><img src="img/wefeelfine-icon.jpg"></a>
+      <a href="#"><div class="title">Fastfood</div><img src="img/urbaniacs-icon.jpg"></a>
+      <a href="#"><div class="title">Fastfood</div><img src="img/distilled-icon.jpg"></a>
+      <a href="#"><div class="title">Fastfood</div><img src="img/webdesign-icon.gif"></a>
+      <a href="#/chaparral"><img src="img/chaparral-icon.gif"></a>
+      <a href="#"><img src="img/twr-icon.gif"></a>
+      <a href="#"><img src="img/cp-icon.jpg"></a>
+-->
+
+		
 
 		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+		<script src="js/reveal.js"></script>
 
 		<script>
 
@@ -352,13 +567,16 @@ function linkify( selector ) {
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
-				progress: true,
+				progress: false,
 				history: true,
 				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
+        overview: true,
+				theme: 'simple', // available themes are in /css/theme
+				transition: 'linear',
+				loop: 'true',
+				transitionSpeed: 'fast',
+				rollingLinks: false,
+				
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -371,7 +589,28 @@ function linkify( selector ) {
 					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
+			
+			    
+     var tag = document.createElement('script');
 
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+      var players = [];
+      function onYouTubeIframeAPIReady() {
+        //players.push(new YT.Player('player', {}));
+        //players.push(new YT.Player('player2', {}));
+      }
+      
+       Reveal.addEventListener( 'slidechanged', function( event ) {
+        for (var p = 0; p < players.length; p++) {
+          players[p].pauseVideo();
+        }
+      });
+      
+
+      
 		</script>
 
 	</body>

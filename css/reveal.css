@@ -338,8 +338,8 @@ body {
 	width: 110px;
 	height: 110px;
 	z-index: 30;
-	right: 10px;
-	bottom: 10px;
+	top: 0px;
+	left: 0px;
 }
 
 .reveal .controls div {
@@ -389,7 +389,7 @@ body {
 
 .reveal .controls div.navigate-down {
 	left: 42px;
-	top: 74px;
+	top: 44px;
 
 	border-top-width: 22px;
 	border-top-color: #eee;
