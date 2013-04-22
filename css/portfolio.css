@@ -1,48 +1,71 @@
-  #icons a  {
+    #icons a  {
         position: relative;
         font: 8px arial;
         font-weight: bold;
         text-decoration: none;
         -webkit-filter: grayscale(1);
+        margin: 10px;
+        display: block;
+        float: left;
       }
       
-      #icons a div {
-        position: absolute;
-        top: -80px;
-        left: 0px;
-        width: 80px;
-        text-align: center;
-      }
-      
+   
       #icons a:hover {
         -webkit-filter: grayscale(0);
       }
       
       #icons a img {
          border: 1px solid gray;
-         margin: 10px 10px 10px 10px;
-         height: 32px;
+         height: 64px;
+         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
       }
       
-      #icons {
+       #icons a.color {
+        -webkit-filter: grayscale(0);
+      }
+      
+      #menu {
         position: absolute;
         top: 0px;
         left: 0px;
         width: 100%;
-        overflow: hidden;
-        background: url('img/bar2.gif');
+        background: url('../img/bar2.gif');
         border-bottom: 1px solid black;
         z-index: 20;
         zoom: 1;
-        padding-left: 100px;
+        height: 90px;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+
       }
       
-      .icon {
-        display: block;
-        width: 100px;
-        position: relative;
-        float: left;
+      #visible {
+        position: absolute;
+        height: 100px;
+        left: 120px;
+        width: 100%;
+        overflow: hidden;
+
       }
+      
+      #icons {
+        width: 10000px;
+        position: absolute;
+        -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
+        -ms-transition: all .2s linear;
+        -o-transition: all .2s linear;
+      }
+      
+      
+      #icons.jump {
+       
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+      }
+      
+      
       
       .subpages {
         width: 10px;
@@ -78,8 +101,7 @@
 	margin: 0px;
 	margin-right:10px;
 	margin-bottom:10px;
-		margin-bottom: 20px;
-
+  margin-bottom: 20px;
 	border:1px solid gray;
 	clear: both;
 }
