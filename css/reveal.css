@@ -338,7 +338,7 @@ body {
 	width: 110px;
 	height: 110px;
 	z-index: 30;
-	top: 0px;
+	bottom: -30px;
 	left: 0px;
 }
 
@@ -395,6 +395,14 @@ body {
 	border-top-color: #eee;
 }
 
+.reveal .controls div.navigate-next {
+	left: 10px;
+	top: 74px;
+  width: 90px;
+  height: 12px;
+	border-width: 0px;
+	background: darkblue;
+}
 
 /*********************************************
  * PROGRESS BAR
@@ -518,10 +526,12 @@ body {
  * SLIDES
  *********************************************/
 
+
 .reveal {
-	position: relative;
+  position: absolute;
 	width: 100%;
-	height: 100%;
+  top: 90px;
+  bottom: 90px;
 }
 
 .reveal .slides {
@@ -530,6 +540,7 @@ body {
 	height: 100%;
 	left: 50%;
 	top: 50%;
+	margin-top: 70px;
 
 	overflow: visible;
 	z-index: 1;

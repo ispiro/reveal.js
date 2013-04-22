@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Ian Spiro / Portfolio</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="author" content="Ian Spiro, Hakim El Hattab">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -17,52 +17,14 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/simpler.css" id="theme">
 		<link rel="stylesheet" href="css/portfolio.css">
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );      
-      var lookup = [];
-      var loopIcon;
-
-      window.addEventListener('DOMContentLoaded', function() {
-        var sections = document.getElementById('mySlides').children;
-        var icons = document.getElementById('icons');
-        
-        for (var copy = 0; copy < 2; copy++) {
-          for (var i = 0; i < sections.length; i++) {
-            var section = sections[i];
-            if (section.tagName != "SECTION") continue;
-            
-            var a = document.createElement("a");
-            a.class = "icon";
-            a.href = "/#/" + section.id;
-            var img = document.createElement("img");
-            img.src = "img/" + section.id + "_icon.jpg";
-            a.appendChild(img);
-            icons.appendChild(a);
-            if (!lookup[i]) lookup[i] = a;
-            
-            if (i == 0 && copy == 1) {
-              loopIcon = a;
-            }
-          }
-      }
-      
-      });
-      		
-		</script>
+		
 		<style TYPE="text/css">
       section  {
-        -webkit-transform: rotateX(0deg); /* Safari and Chrome */
       }
       
-      .reveal.overview .slides section.present:not(.stack) {
-      }
-      
-            
+      .reveal {
+        z-index: 0;
+      }     
     </style>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -70,67 +32,41 @@
 	</head>
 
 <body>
-        
-    <div class="reveal" style="z-index: 1">
+    
+    	
+    <div id="menu">
+		  <div id="visible">
+		    <div id="icons"></div>
+      </div>
+    </div>
 
-		  <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="reveal">
+    
 		  <div class="slides" id="mySlides">
 
-      <section id="home">
-			 <h2>Portfolio</h2>
-			 <small>Site based on <a target="_new" href="http://lab.hakim.se/reveal-js/">Reveal.js</a></small>
+
+      <section id="home" display="Home" year="">
+        <section>
+			   <h2>Ian Spiro : Portfolio</h2>
+        
+        
+         <h4>
+          Click, swipe, or press the arrow keys.
+         </h4>
+         
+         <h4>
+          Spacebar advances through all content.
+         </h4>
+         
+          <small>
+            Portfolio code based on <a href="http://lab.hakim.se/reveal-js/" target="_new">Reveal.js</a>
+          </small>
+          
+        </section>
 		  </section>
 		
-		  <section id="cryptagram">
+		<section id="academic" display="Academic" year="2013">
         <section>
-					<p>Cryptagram</p>
-					
-          <img src="img/cryptagram_1.jpg">
-          <p class=prose>
-          <a href="http://cryptagr.am">Cryptagram</a> enhances online photo privacy by adding password protection to JPEG images.
-        
-          <br>I developed the encoding protocol and wrote the <b>Chrome Extension</b>, making extensive use of object-oriented <b>Javascript</b> through the <b>Closure</b> framework.</p>
-
-		    </section>  
-      </section>
-		
-		  <section id="motionchain">
-        <section>
-					<p>Motion Chain</p>
-          <img src="img/motionchain_1.jpg" class="box">
-		    </section>
-		    
-		    <section>
-					<p>Motion Chain</p>
-          
-          
-<!-- <iframe id="player" width="640" height="360" src="https://www.youtube.com/embed/06T6FNO2HA8?feature=player_embedded&enablejsapi=1" frameborder="0" allowfullscreen></iframe>         -->
-  
-  
-        </section>	    
-      </section>
-		
-		  <section id="dotshow">
-        <section>
-					<p>Dot Show</p>
-          <img src="img/dotshow_1.jpg">
-		    </section>
-      </section>
-
-		  <section id="markerless">
-        <section>
-					<p>Markerless Motion Capture</p>
-          <img src="img/markerless_1.jpg" class="box">
-		    </section>		    
-        <section>
-					<p>Markerless Motion Capture</p>
-          <img src="img/markerless_2.jpg" class="box">
-		    </section>		    
-      </section>
-
-		  <section id="academic">
-        <section>
-					<p>Academic Research</p>
           <div id="publications">
             <p><a href="chi2012.pdf"><img src="img/mc.jpg">Motion Chain</a><br>
             <i>A Webcam Game for Crowdsourcing Gesture Collection</i><br>
@@ -163,381 +99,252 @@
 		    </section>		    
       </section>
 
-		  <section id="squidball">
+		  <section id="cryptagram" display="Cryptagram" year="2013">
         <section>
-					<p>Squidball at Ars Electronica</p>
-          <img src="img/squidball_1.jpg" class="box">
-		    </section>		    
+        
+          <img src="img/cryptagram_1.jpg">
+          <p class=prose>
+          <a href="http://cryptagr.am">Cryptagram</a> enhances online photo privacy by adding password protection to JPEG images.
+        
+          <br>I developed the encoding protocol and wrote the <b>Chrome Extension</b>,
+          making extensive use of object-oriented <b>Javascript</b> through the 
+          <b>Closure</b> framework.</p>
+
+		    </section>  
       </section>
-      
-      <section id="mocap">
+		
+		  <section id="motionchain" display="Motion Chain" year="2012">
         <section>
-					<p>Motion Capture</p>
+          <img src="img/motionchain_1.jpg" class="box">
+		    </section>
+		    
+		    <section>
+					<p>Motion Chain</p>
+        </section>	    
+      </section>
+		      
+      <section id="mocap" display="Motion Capture" year="2012">
+        <section>
           <img src="img/mocap_1.jpg" class="box">
 		    </section>
       </section>
       
-		  <section id="party">
+		  <section id="markerless" display="Markerless Mocap" year="2011">
         <section>
-					<p>Party Visualizations</p>
-          <img src="img/party_1.jpg">
-		    </section> 
-	      <section>
-					<p>T-Scope</p>
-		     <!--  <iframe id="player2" width="640" height="360" src="https://www.youtube.com/embed/HZfxuXG1giQ?feature=player_embedded&enablejsapi=1" frameborder="0" allowfullscreen></iframe>  -->
-		    </section> 	      
-		    <section>
-					<p>Hottest or Not</p>
-          <img src="img/party_3.jpg">
-		    </section>
+          <img src="img/markerless_1.jpg" class="box">
+		    </section>		    
+        <section>
+          <img src="img/markerless_2.jpg" class="box">
+		    </section>		    
       </section>
 
-		  <section id="xcam">
+		  <section id="xcam" display="Xcam" year="2011">
         <section>
-					<p>Xcam</p>
           <img src="img/xcam_1.jpg">
 		    </section>
       </section>   
 
-		  <section id="bunny">
+		  <section id="squidball" display="Squidball" year="2010">
         <section>
-					<p>Bunny Cam</p>
+          <img src="img/squidball_1.jpg" class="box">
+		    </section>		    
+      </section>
+
+		  <section id="party" display="Party" year="2010">
+        <section>
+          <img src="img/party_1.jpg">
+		    </section> 
+	      <section>
+		    </section> 	      
+		    <section>
+          <img src="img/party_3.jpg">
+		    </section>
+      </section>
+
+		  <section id="bunny" display="Bunny Cam" year="2009">
+        <section>
           <img src="img/bunny_1.jpg">
 		    </section>
       </section>   
 
-		  <section id="wlog">
+      <section id="dotshow" display="Dot Show" year="2008">
         <section>
-					<p>Wlog</p>
+          <img src="img/dotshow_1.jpg">
+		    </section>
+      </section>
+
+		  <section id="wlog" display="Wlog" year="2008">
+        <section>
           <img src="img/wlog_1.jpg">
 		    </section>
       </section>
 
-      <section id="plenovision">
+      <section id="plenovision" display="Plenovision" year="2008">
         <section>
-					<p>Plenovision</p>
           <img src="img/plenovision_1.jpg">
 		    </section>
       </section>   
 
-		  <section id="gmail">
+		  <section id="gmail" display="Gmail Paper" year="2007">
         <section>
-					<p>Gmail Paper</p>
           <img src="img/gmail_1.jpg">
 		    </section>
         <section>
-					<p>Gmail Paper</p>
           <img src="img/gmail_2.jpg">
 		    </section>
       </section>
 
-		  <section id="dlog">
+		  <section id="web" display="Web" year="2007">
         <section>
-					<p>Dlog</p>
-          <img src="img/dlog_1.jpg">
+          <img src="img/web_1.jpg">
+		    </section>		    
+        <section>
+          <img src="img/web_2.jpg">
 		    </section>
-        <section>
-					<p>Dlog</p>
-          <img src="img/dlog_2.jpg">
-		    </section>
-      </section>
-
-		  <section id="fastfood">
-        <section>
-					<p>Fast Food Maps</p>
-          <img src="img/fastfood_1.jpg" class="box">
-		    </section>
-        <section>
-					<p>Fast Food Maps</p>
-          <img src="img/fastfood_2.jpg" class="box">
-		    </section>
-        <section>
-					<p>Fast Food Maps</p>
-          <img src="img/fastfood_3.jpg">
+		    <section>
+          <img src="img/web_3.jpg">
 		    </section>
       </section>
-
-		  <section id="trainovision">
+ 
+ 		  <section id="distilled" display="Distilled" year="2007">
         <section>
-					<p>Trainovision</p>
-          <img src="img/trainovision_1.jpg" class="box">
+          <img src="img/distilled_1.jpg">
 		    </section>
         <section>
-					<p>Trainovision</p>
-          <img src="img/trainovision_2.jpg" class="box">
+          <img src="img/distilled_2.jpg">
 		    </section>
         <section>
-					<p>Trainovision</p>
-          <img src="img/trainovision_3.jpg" class="box">
+          <img src="img/distilled_3.jpg">
 		    </section>
       </section>
-
-		  <section id="lifegraph">
+      
+      <section id="wefeelfine" display="We Feel Fine" year="2006">
         <section>
-					<p>Life Graph</p>
-          <img src="img/lifegraph_1.jpg">
-		    </section>
-        <section>
-					<p>Life Graph</p>
-          <img src="img/lifegraph_2.jpg">
-		    </section>
-      </section>
-
-		  <section id="weddingtowne">
-        <section>
-					<p>Weddingtowne</p>
-          <img src="img/weddingtowne_1.jpg">
-		    </section>
-        <section>
-					<p>Weddingtowne</p>
-          <img src="img/weddingtowne_2.jpg">
-		    </section>
-        <section>
-					<p>Weddingtowne</p>
-          <img src="img/weddingtowne_3.jpg">
-		    </section>
-      </section>
-
-		  <section id="pile">
-        <section>
-					<p>Pile of Papers</p>
-          <img src="img/pile_1.jpg">
-		    </section>
-        <section>
-					<p>Pile of Papers</p>
-          <img src="img/pile_2.jpg">
-		    </section>
-      </section>
-
-		  <section id="twr">
-        <section>
-					<p>The Wooden Robot</p>
-          <img src="img/twr_1.jpg" class="box">
-		    </section>
-        <section>
-					<p>The Wooden Robot</p>
-          <img src="img/twr_2.jpg">
-		    </section>
-        <section>
-					<p>The Wooden Robot</p>
-          <img src="img/twr_3.jpg">
-		    </section>
-        <section>
-					<p>The Wooden Robot</p>
-          <img src="img/twr_4.jpg">
-		    </section>
-      </section>
-
-		  <section id="houndbite">
-        <section>
-					<p>Hound Bite</p>
-          <img src="img/houndbite_1.jpg">
-		    </section>
-      </section>
-
-		  <section id="wefeelfine">
-        <section>
-					<p>We Feel Fine</p>
           <img src="img/wefeelfine_1.jpg" class="box">
 		    </section>
         <section>
-					<p>We Feel Fine</p>
           <img src="img/wefeelfine_2.jpg" class="box">
 		    </section>
       </section>
 
-		  <section id="urbaniacs">
+		  <section id="houndbite" display="Hound Bite" year="2006">
         <section>
-					<p>Urbaniacs</p>
-          <img src="img/urbaniacs_1.jpg" class="box">
-		    </section>
-        <section>
-					<p>Urbaniacs</p>
-          <img src="img/urbaniacs_2.jpg" class="box">
-		    </section>
-        <section>
-					<p>Urbaniacs</p>
-          <img src="img/urbaniacs_3.jpg" class="box">
+          <img src="img/houndbite_1.jpg">
 		    </section>
       </section>
 
-		  <section id="distilled">
+		  <section id="dlog" display="Dlog" year="2006">
         <section>
-					<p>Distilled</p>
-          <img src="img/distilled_1.jpg">
+          <img src="img/dlog_1.jpg">
 		    </section>
         <section>
-					<p>Distilled</p>
-          <img src="img/distilled_2.jpg">
-		    </section>
-        <section>
-					<p>Distilled</p>
-          <img src="img/distilled_3.jpg">
+          <img src="img/dlog_2.jpg">
 		    </section>
       </section>
 
-		  <section id="web">
+		  <section id="fastfood" display="Fast Food Maps" year="2006">
         <section>
-					<p>Web Design</p>
-          <img src="img/web_1.jpg">
-		    </section>		    
-        <section>
-					<p>Web Design</p>
-          <img src="img/web_2.jpg">
+          <img src="img/fastfood_1.jpg" class="box">
 		    </section>
-		    <section>
-					<p>Web Design</p>
-          <img src="img/web_3.jpg">
+        <section>
+          <img src="img/fastfood_2.jpg" class="box">
+		    </section>
+        <section>
+          <img src="img/fastfood_3.jpg">
 		    </section>
       </section>
       
-      <section id="prowler">
+		  <section id="urbaniacs" display="Urbaniacs" year="2006">
         <section>
-					<p>College Prowler</p>
+          <img src="img/urbaniacs_1.jpg" class="box">
+		    </section>
+        <section>
+          <img src="img/urbaniacs_2.jpg" class="box">
+		    </section>
+        <section>
+          <img src="img/urbaniacs_3.jpg" class="box">
+		    </section>
+      </section>
+      
+      <section id="twr" display="The Wooden Robot" year="2005">
+        <section>
+          <img src="img/twr_2.jpg">
+		    </section>
+        <section>
+          <img src="img/twr_3.jpg">
+		    </section>
+        <section>
+          <img src="img/twr_4.jpg">
+		    </section>
+      </section>
+
+		  <section id="trainovision" display="Trainovision" year="2005">
+        <section>
+          <img src="img/trainovision_1.jpg" class="box">
+		    </section>
+        <section>
+          <img src="img/trainovision_2.jpg" class="box">
+		    </section>
+        <section>
+          <img src="img/trainovision_3.jpg" class="box">
+		    </section>
+      </section>
+
+		  <section id="lifegraph" display="Life Graph" year="2005">
+        <section>
+          <img src="img/lifegraph_1.jpg">
+		    </section>
+        <section>
+          <img src="img/lifegraph_2.jpg">
+		    </section>
+      </section>
+
+		  <section id="weddingtowne" display="Wedding Towne" year="2005">
+        <section>
+          <img src="img/weddingtowne_1.jpg">
+		    </section>
+        <section>
+          <img src="img/weddingtowne_2.jpg">
+		    </section>
+        <section>
+          <img src="img/weddingtowne_3.jpg">
+		    </section>
+      </section>
+      
+      <section id="prowler" display="College Prowler" year="2005">
+        <section>
           <img src="img/prowler_1.jpg">
 		    </section>
       </section>
 
-		  <section id="chaparral">
+		  <section id="pile" display="Pile of Papers" year="2004">
         <section>
-					<p>Stanford Chaparral</p>
+          <img src="img/pile_1.jpg">
+		    </section>
+        <section>
+          <img src="img/pile_2.jpg">
+		    </section>
+      </section>
+      
+		  <section id="chaparral" display="Stanford Chaparral" year="2000-2004">
+        <section>
           <img src="img/chaparral_1.jpg">
 		    </section>
 		    <section>
-					<p>Stanford Chaparral</p>
           <img src="img/chaparral_2.jpg">
 		    </section>
 		    <section>
-					<p>Stanford Chaparral</p>
           <img src="img/chaparral_3.jpg">
-		    </section>
-		    <section>
-					<p>Stanford Chaparral</p>
-          <img src="img/chaparral_4.jpg">
 		    </section>
       </section>
             
 			</div>
-			
-		<div id="menu">
-		  <div id="visible">
-		    <div id="icons"></div>
-      </div>
-    </div>
-			
 		</div>
-		
-		
-
-      
-     <!--
- <div class="icon">
-        <a href="#"><div class="title">Fast Food</div><img src="img/fastfood-icon.jpg"></a>
-        <div class="subpages">
-          <a href=#>1</a>
-          <a href=#>2</a>
-          <a href=#>3</a>
-        </div>
-      </div>
-      
-       <div class="icon">
-        <a href="#"><div class="title">Trainovision</div><img src="img/train-icon.jpg"></a>
-        <div class="subpages">
-          <a href=#>1</a>
-          <a href=#>2</a>
-          <a href=#>3</a>
-        </div>
-      </div>
-      
-      <a href="#"><div class="title">Weddingtowne</div><img src="img/weddingtowne-icon.jpg"></a>
-      <a href="#"><div class="title">Fastfood</div><img src="img/lifegraph-icon.jpg"></a>
-      <a href="#"><div class="title">Fastfood</div><img src="img/dlog-icon.gif"></a>
-      <a href="#"><div class="title">Fastfood</div><img src="img/pile-icon.jpg"></a>
-      <a href="#"><div class="title">Fastfood</div><img src="img/houndbite-icon.gif"></a>
-      <a href="#"><div class="title">Fastfood</div><img src="img/wefeelfine-icon.jpg"></a>
-      <a href="#"><div class="title">Fastfood</div><img src="img/urbaniacs-icon.jpg"></a>
-      <a href="#"><div class="title">Fastfood</div><img src="img/distilled-icon.jpg"></a>
-      <a href="#"><div class="title">Fastfood</div><img src="img/webdesign-icon.gif"></a>
-      <a href="#/chaparral"><img src="img/chaparral-icon.gif"></a>
-      <a href="#"><img src="img/twr-icon.gif"></a>
-      <a href="#"><img src="img/cp-icon.jpg"></a>
--->
-
-		
+		      
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: false,
-				history: true,
-				center: true,
-        overview: true,
-				theme: 'simpler', // available themes are in /css/theme
-				transition: 'linear',
-				loop: 'true',
-				transitionSpeed: 'fast',
-				rollingLinks: false,
-				
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-			
-			    
-      //var tag = document.createElement('script');
-      //tag.src = "https://www.youtube.com/iframe_api";
-      //var firstScriptTag = document.getElementsByTagName('script')[0];
-      //firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-      //var players = [];
-      //function onYouTubeIframeAPIReady() {
-        //players.push(new YT.Player('player', {}));
-        //players.push(new YT.Player('player2', {}));
-      //}
-      
-      var icons = document.getElementById("icons");
-      var lastIcon;
-      
-       Reveal.addEventListener( 'slidechanged', function( event ) {
-        
-        if (lastIcon) {
-          lastIcon.className = "";
-        }
-        
-        var icon = lookup[event.indexh];
-        icon.className = "color";
-        lastIcon = icon;        
-        icons.className = "";
-
-        var newX = -icon.offsetLeft;
-        icons.style.left = newX + "px";
-        
-        
-         if (event.indexh == lookup.length - 1) {
-          icons.className = "jump";
-          var newX = -loopIcon.offsetLeft;
-          icons.style.left = newX + "px";
-          icons.className = "";
-        };
-        
-      });
-      
-
-      
-		</script>
+		<script src="portfolio.js"></script>
 
 	</body>
 </html>
