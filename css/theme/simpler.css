@@ -141,6 +141,11 @@ body {
 .reveal a:hover img {
   box-shadow: none; }
 
-.reveal section img.box {
+.reveal section img:not(.borderless) {
   border: 1px solid gray;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);}
+
+.reveal img {
+  max-width: none;
+  max-height: none;
+}

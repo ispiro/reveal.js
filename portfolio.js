@@ -3,6 +3,26 @@ var icons = document.getElementById("icons");
 var pad = 28;
 var sections = document.getElementById('mySlides').children;
 
+var player;
+
+function hidePlayer() {
+  if (player) {
+    player.parentElement.removeChild(player);
+    player = null;
+  }
+}
+
+function playVideo(video) {
+  hidePlayer();
+  
+  player = document.createElement("div");
+  player.className = "player";
+  player.innerHTML = "<iframe src=" + video + " frameborder=1 allowfullscreen></iframe>";
+  player.setAttribute("onclick","hidePlayer()");
+  document.getElementById('playerLayer').appendChild(player);  
+}
+
+
 
 Reveal.initialize({
 	controls: true,
@@ -29,19 +49,24 @@ Reveal.initialize({
 
 
 Reveal.addEventListener( 'slidechanged', function( event ) {
-  slideTo(event.indexh, event.indexv);
+  slide(event);
 });
 
  
 Reveal.addEventListener( 'ready', function( event ) {
-  slideTo(event.indexh, event.indexv);
+  slide(event);
 });
 
 
 var lastIcon;
 var lastPageButton;
 
-function slideTo(x, y) {
+function slide(event) {
+  
+  var x = event.indexh;
+  var y = event.indexv;
+  
+  hidePlayer();
 
   if (lastIcon) {
     lastIcon.className = "icon";
@@ -69,7 +94,7 @@ window.addEventListener('DOMContentLoaded', function() {
             if (section.tagName != "SECTION") continue;
             
             var div = document.createElement("div");
-            div.className = "container";
+            div.className = "container";            
             var a = document.createElement("a");
             a.className = "icon";
             a.href = "/#/" + section.id;
@@ -100,6 +125,9 @@ window.addEventListener('DOMContentLoaded', function() {
             if (!lookup[i]) lookup[i] = div;
         }
     }
+    
+    lookup[sections.length-1].id = "lastIcon";
+    
 });
 
    
