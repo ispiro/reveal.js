@@ -338,8 +338,8 @@ body {
 	width: 110px;
 	height: 110px;
 	z-index: 30;
-	bottom: -30px;
-	left: 0px;
+	bottom: 0px;
+	right: 0px;
 }
 
 .reveal .controls div {
@@ -389,7 +389,7 @@ body {
 
 .reveal .controls div.navigate-down {
 	left: 42px;
-	top: 44px;
+	top: 74px;
 
 	border-top-width: 22px;
 	border-top-color: #eee;
@@ -528,10 +528,7 @@ body {
 
 
 .reveal {
-  position: absolute;
-	width: 100%;
-  top: 90px;
-  bottom: 90px;
+  height: 100%;
 }
 
 .reveal .slides {
@@ -540,7 +537,7 @@ body {
 	height: 100%;
 	left: 50%;
 	top: 50%;
-	margin-top: 70px;
+	margin-top: 40px;
 
 	overflow: visible;
 	z-index: 1;
