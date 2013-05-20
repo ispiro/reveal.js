@@ -84,8 +84,8 @@ window.addEventListener('DOMContentLoaded', function() {
             var infoDiv = document.createElement("div");
             infoDiv.className = "info";
             div.appendChild(infoDiv);
-            infoDiv.innerHTML += section.getAttribute("display");
-            infoDiv.innerHTML += "<b>" + section.getAttribute("year") + "</b>";
+            infoDiv.innerHTML += section.getAttribute("data-display");
+            infoDiv.innerHTML += "<b>" + section.getAttribute("data-year") + "</b>";
             var pagesDiv = document.createElement("div");
             pagesDiv.className = "pages";
             infoDiv.appendChild(pagesDiv);
